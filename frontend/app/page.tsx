@@ -3,11 +3,8 @@
 import React, { useState } from "react";
 import TranslateCard from "../components/TranslateCard";
 import LanguageSelector from "../components/LanguageSelector";
-import { translateText, reverseTranslate } from "./utils/api";
 import { MdOutlineTranslate } from "react-icons/md";
-import ResultCard from "../components/TranslationResultCard";
 import JudgeSelector from "../components/JudgeSelector";
-import TranslatoreCard from "../components/ModelCard";
 import ModelRow from "@/components/ModelRow";
 import { GrValidate } from "react-icons/gr";
 import bgImage from '@/public/images/super-translator-bg.svg';
@@ -37,7 +34,7 @@ export default function Home() {
 
   const validateForm = () => {
     let valid = true;
-    let newErrors = { ...errors };
+    const newErrors = { ...errors };
     if (inputText.trim().length === 0) {
       newErrors.inputText = "Please enter text to translate!";
       valid = false;
