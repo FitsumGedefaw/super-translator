@@ -1,5 +1,4 @@
 import { MicrophoneIcon, PaperClipIcon } from "@heroicons/react/24/outline";
-import useTranslationStore from "../app/Redux/translateStore";
 import LanguageSelector from "./LanguageSelector";
 import { TranslateCardProps } from "@/types/translator";
 

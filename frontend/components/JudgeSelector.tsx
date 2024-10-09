@@ -1,4 +1,3 @@
-import useTranslationStore from "@/app/Redux/translateStore";
 import { JudgeSelectorProps } from "@/types/translator";
 import React from "react";
 import Select, { SingleValue, StylesConfig } from "react-select";
@@ -65,13 +64,11 @@ const JudgeSelector: React.FC<JudgeSelectorProps> = ({
   setSelectedJudge,
   // onJudgeChange,
 }) => {
-  const { model, setModel } = useTranslationStore();
 
   // Handle change event when a service is selected
   const handleChange = (selectedOption: SingleValue<ServiceOption>) => {
     if (selectedOption) {
       console.log("Selected meaning service:", selectedOption);
-      setModel(selectedOption.value);
       setSelectedJudge(selectedOption.value); // Update the selected service
 
       // Call the service change callback

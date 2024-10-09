@@ -4,14 +4,13 @@ import React, { useState } from "react";
 import TranslateCard from "../components/TranslateCard";
 import LanguageSelector from "../components/LanguageSelector";
 import { translateText, reverseTranslate } from "./utils/api";
-import useTranslationStore from "./Redux/translateStore";
 import { MdOutlineTranslate } from "react-icons/md";
 import ResultCard from "../components/TranslationResultCard";
 import JudgeSelector from "../components/JudgeSelector";
 import TranslatoreCard from "../components/ModelCard";
 import ModelRow from "@/components/ModelRow";
 import { GrValidate } from "react-icons/gr";
-import bgImage from '@/public/images/super-translator-bg.png';
+import bgImage from '@/public/images/super-translator-bg.svg';
 import Image from "next/image";
 
 // Define your models
