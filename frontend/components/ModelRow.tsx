@@ -50,7 +50,7 @@ const ModelRow: React.FC<ModelRowProps> = ({
 
   useEffect(() => {
     handleTranslate();
-  }, [originalText, originalLanguage, outputLanguage]);
+  }, [originalText, originalLanguage, outputLanguage, handleTranslate]);
 
   console.log("translate rerender");
 

@@ -45,7 +45,7 @@ const JudgingCard: React.FC<JudgingCardProps> = ({
 
   useEffect(() => {
     handleReverseTranslate();
-  }, [judgeText]);
+  }, [judgeText, handleReverseTranslate]);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(judgeResult);
