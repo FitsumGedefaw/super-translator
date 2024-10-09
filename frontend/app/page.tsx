@@ -96,7 +96,7 @@ export default function Home() {
       <div className="relative z-10 overflow-y-auto min-h-screen">
         <div className="grid grid-rows text-black justify-items-center min-h-screen pb-20 gap-8 sm:p-10 font-[family-name:var(--font-geist-sans)]">
           <main className="flex flex-col items-center gap-4 min-h-screen justify-center w-[80%]">
-            <h1 className="text-2xl font-bold">SuperTranslate</h1>
+            <h1 className="text-2xl font-bold text-white">SuperTranslate</h1>
             {errors.inputText && (
               <div className="flex justify-start w-full">
                 <p className="text-red-500">{errors.inputText}</p>
