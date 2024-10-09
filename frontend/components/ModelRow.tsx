@@ -43,9 +43,7 @@ const ModelRow: React.FC<ModelRowProps> = ({
 
   useEffect(() => {
     handleTranslate();
-  }, [originalText, originalLanguage, outputLanguage, handleTranslate]);
-
-  console.log("translate rerender");
+  }, [originalText, originalLanguage, outputLanguage]);
 
   let result = "Waiting for translation!";
   if (isLoading) {

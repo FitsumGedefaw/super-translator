@@ -34,15 +34,13 @@ const JudgingCard: React.FC<JudgingCardProps> = ({
 
   useEffect(() => {
     handleReverseTranslate();
-  }, [judgeText, handleReverseTranslate]);
+  }, [judgeText]);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(judgeResult);
     setIsCopied(true);
     setTimeout(() => setIsCopied(false), 2000);
   };
-
-  console.log("judge rerender");
 
   let result = "No result to validate!";
   if (isLoading) {
