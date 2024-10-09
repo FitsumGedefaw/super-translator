@@ -7,13 +7,6 @@ export const translateAPI = createApi({
     baseUrl: "https://supertranslate.onrender.com/",
   }),
   endpoints: (builder) => ({
-    // translateText: builder.mutation<translateAPIResponse, translateAPIRequest>({
-    //     query: (translatePayload) => ({
-    //         url: `api/translate/openai`,
-    //         method: 'POST',
-    //         body: translatePayload,
-    //     }),
-    // }),
     translateText: builder.mutation<reverseTranslateAPIResponse, reverseTranslateAPIRequest>({
       query: (reverseTranslatePayload) => ({
           url: `api/translate`,

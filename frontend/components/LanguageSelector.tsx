@@ -82,7 +82,6 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ setLanguage, placeH
   // Handle change event when a language is selected
   const handleChange = (selectedOption: SingleValue<LanguageOption>) => {
     if (selectedOption) {
-      console.log('Selected source language:', selectedOption);
       setLanguage(selectedOption.value);
     }
   };

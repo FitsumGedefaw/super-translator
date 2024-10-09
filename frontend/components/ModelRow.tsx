@@ -25,13 +25,7 @@ const ModelRow: React.FC<ModelRowProps> = ({
     useTranslateTextMutation();
 
   const handleTranslate = async () => {
-    const req = {
-      text: originalText,
-      sourceLanguage: originalLanguage,
-      targetLanguage: outputLanguage,
-    };
 
-    console.log("translate req", req);
 
     if (originalText && originalLanguage && outputLanguage) {
       const res = await translateText({
@@ -40,7 +34,6 @@ const ModelRow: React.FC<ModelRowProps> = ({
         sourceLanguage: originalLanguage,
         targetLanguage: outputLanguage,
       });
-      console.log("translate response", res.data);
       setTranslationResult(res.data?.translation as string);
       setTime(res.data?.time as string);
       setSatisfaction(res.data?.satisfaction);

@@ -20,15 +20,6 @@ const JudgingCard: React.FC<JudgingCardProps> = ({
     useTranslateTextMutation();
 
   const handleReverseTranslate = async () => {
-    const req = {
-      text: text,
-      sourceLanguage: sourceLanguage,
-      targetLanguage: targetLanguage,
-      model: judgeModel,
-    };
-
-    console.log("reverse req", req);
-
     if (text) {
       const res = await reverseTranslateText({
         model: judgeModel,
@@ -36,10 +27,8 @@ const JudgingCard: React.FC<JudgingCardProps> = ({
         targetLanguage: sourceLanguage,
         text: text,
       });
-      console.log("reverse response", res);
       setJudgeResult(res.data?.translation as string);
-      // setTime(res.data?.time as string);
-      // setSatisfaction(res.data?.satisfaction);
+     
     }
   };
 
